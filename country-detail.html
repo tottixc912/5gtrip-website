@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="选择 5GTrip 国家旅行 eSIM 流量套餐，查看有效期、设备支持和激活说明。">
+  <title>国家 eSIM 套餐｜5GTrip</title>
+  <link rel="icon" href="assets/5gtrip-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/product-pages.css">
+  <link rel="stylesheet" href="assets/language-selector.css">
+  <style>
+    .country-detail-page .travel-visual{position:relative;top:auto;align-self:start}
+    .country-detail-page .detail-content{min-width:0}
+    .coverage-panel{margin:0 0 28px;border:1px solid var(--border);border-radius:16px;background:var(--white);overflow:hidden;box-shadow:var(--shadow)}.unlimited+.coverage-panel{margin-top:18px}
+    .coverage-panel>header{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--border);background:var(--surface)}
+    .coverage-icon,.device-row-icon,.device-type-icon{display:grid;place-items:center;flex:0 0 auto;color:var(--accent);background:var(--accent-wash)}
+    .coverage-icon{width:38px;height:38px;border-radius:11px}.coverage-icon svg,.device-row-icon svg,.device-type-icon svg{width:20px;height:20px}
+    .coverage-panel h2{margin:0;font-size:16px}.coverage-panel header p{margin:3px 0 0;color:var(--muted);font-size:10px}
+    .coverage-grid{display:grid;grid-template-columns:1fr 1fr}.coverage-block{padding:17px 18px;min-width:0}.coverage-block+.coverage-block{border-left:1px solid var(--border)}
+    .coverage-label{display:flex;align-items:center;gap:7px;margin-bottom:11px;color:var(--fg);font-size:11px;font-weight:700}.coverage-label svg{width:16px;height:16px;color:var(--accent)}
+    .coverage-chips{display:flex;flex-wrap:wrap;gap:7px}.coverage-chip{display:inline-flex;align-items:center;min-height:30px;padding:0 10px;border:1px solid var(--border);border-radius:999px;background:var(--surface);font-size:10px;font-weight:600}
+    .network-list{display:grid;gap:7px}.network-item{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:34px;padding:0 10px;border-radius:9px;background:var(--surface);font-size:10px}.network-item strong{font-size:10px}.network-item span{color:var(--muted);white-space:nowrap}
+    .coverage-disclaimer{grid-column:1/-1;margin:0;padding:11px 18px;border-top:1px solid var(--border);color:var(--muted);font-size:9px;line-height:1.6}
+    .device-row-copy{display:flex;align-items:center;gap:11px;text-align:left}.device-row-icon{width:34px;height:34px;border-radius:9px}.device-row-copy small{display:block;margin-top:2px;color:var(--muted);font-size:9px;font-weight:500}
+    .device-chevron{width:20px;height:20px;transition:transform .18s var(--ease)}.device-row[aria-expanded="true"] .device-chevron{transform:rotate(180deg)}
+    .country-detail-page .device-list{padding:16px 18px 18px;background:color-mix(in oklch,var(--surface) 54%,var(--white))}.device-groups{display:grid;gap:14px}.device-group+.device-group{padding-top:14px;border-top:1px solid var(--border)}.device-group h3{margin:0 0 7px;color:var(--fg);font-size:11px}.device-models{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;margin:0;padding:0;list-style:none}.device-models li{display:flex;align-items:flex-start;gap:7px;color:var(--muted);font-size:10px;line-height:1.55}.device-models li:before{content:"✓";flex:0 0 auto;color:var(--accent);font-size:9px;font-weight:800;line-height:1.7}.device-list-note{margin:13px 0 0;color:var(--muted);font-size:9px}
+    .device-warning{display:flex;gap:9px;margin-top:13px;padding:11px 12px;border-radius:10px;background:var(--accent-wash);color:color-mix(in oklch,var(--accent) 70%,var(--fg));font-size:9px;line-height:1.6}.device-warning svg{width:17px;height:17px;flex:0 0 auto;margin-top:1px}
+    .features li{display:flex;align-items:flex-start;gap:9px}.features li:before{display:none}.features li svg{width:18px;height:18px;flex:0 0 auto;color:var(--accent);margin-top:1px}
+    .purchase-hint{margin:8px 0 0;color:var(--muted);font-size:11px;line-height:1.55}.checkout-btn{display:flex;align-items:center;justify-content:center;text-decoration:none}.checkout-btn[aria-disabled="true"],.checkout-btn[aria-disabled="true"]:hover{background:var(--border);color:var(--muted);cursor:not-allowed}
+    @media(max-width:1000px){.coverage-grid{grid-template-columns:1fr}.coverage-block+.coverage-block{border-left:0;border-top:1px solid var(--border)}}
+    @media(max-width:767px){.coverage-panel{margin-bottom:22px}.coverage-panel>header{padding:14px}.coverage-block{padding:15px 14px}.coverage-disclaimer{padding:10px 14px}.country-detail-page .device-list{padding:14px}.device-models{grid-template-columns:1fr}.device-row-copy small{display:none}}
+  </style>
+</head>
+<body class="country-detail-page">
+  <a class="skip" href="#plans">跳到套餐选择</a>
+  <div class="topbar" data-od-id="promo-bar">下载 5GTrip App，新用户即享 1GB 旅行流量</div>
+  <header class="site-header" data-od-id="site-header">
+    <div class="container inner">
+      <a class="brand" href="index.html" data-od-id="brand-logo"><img class="brand-logo-img" src="assets/images/5gtrip-logo.png" width="2170" height="725" alt="5GTrip 智能出行"></a>
+      <nav class="site-nav" aria-label="主导航" data-od-id="primary-navigation">
+        <a href="plans.html">全部目的地</a>
+        <a href="how-to-use.html">使用方式</a>
+        <a href="faq.html">常见问题</a>
+        <a href="account.html">账户</a>
+        <a class="nav-cta" href="plans.html">获取 eSIM</a>
+      </nav>
+    </div>
+  </header>
+  <main class="detail-main" data-od-id="country-detail-main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="面包屑"><a href="plans.html">← 全部目的地</a><span>/</span><span id="crumbCountry">英国</span></nav>
+      <div class="detail-grid">
+        <figure class="travel-visual" data-od-id="country-hero-image">
+          <img src="assets/images/nextesim.app/country-hero-3NkeyCc9-b23d0d8365.png" width="470" height="627" alt="旅行箱与飞机组成的旅行场景">
+          <figcaption class="visual-caption"><span>即买即用</span><span>支持 4G / 5G 网络</span></figcaption>
+        </figure>
+        <section class="detail-content" id="plans" aria-labelledby="countryTitle">
+          <div class="country-title"><img id="countryFlag" src="assets/images/flagcdn.com/gb-ac3c2fe020.png" width="80" height="40" alt="英国旗帜"><h1 id="countryTitle" data-od-id="country-title">英国 eSIM</h1></div>
+          <p class="lead" id="countryLead">为英国旅行选择灵活的高速流量套餐。当前价格为界面演示数据，接入真实供应商接口后更新。</p>
+          <h2 class="panel-title" data-od-id="plan-selector-title">选择流量和有效期</h2>
+          <div class="plan-grid" id="planGrid" data-od-id="plan-grid"></div>
+          <div class="unlimited" data-od-id="unlimited-plan"><div><strong>不限量套餐</strong><span>每日高速流量用完后降速 · 演示选项</span></div><select id="unlimitedDays" aria-label="不限量套餐天数"><option value="">暂不选择</option><option value="1">1 天</option><option value="3">3 天</option><option value="7">7 天</option><option value="15">15 天</option></select></div>
+          <section class="coverage-panel" data-od-id="coverage-and-networks" aria-labelledby="coverageTitle">
+            <header><span class="coverage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 9h15M4.5 15h15M12 4c2 2.2 3 4.9 3 8s-1 5.8-3 8c-2-2.2-3-4.9-3-8s1-5.8 3-8Z" stroke="currentColor" stroke-width="1.6"/></svg></span><div><h2 id="coverageTitle">覆盖范围与当地网络</h2><p>购买前快速确认套餐可用地区与网络制式</p></div></header>
+            <div class="coverage-grid">
+              <div class="coverage-block"><div class="coverage-label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.2 7-12A7 7 0 1 0 5 9c0 6.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.2" stroke="currentColor" stroke-width="1.8"/></svg><span>覆盖国家 / 地区</span></div><div class="coverage-chips" id="coverageCountries"></div></div>
+              <div class="coverage-block"><div class="coverage-label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 18h2v2H5v-2Zm4-4h2v6H9v-6Zm4-4h2v10h-2V10Zm4-4h2v14h-2V6Z" fill="currentColor"/></svg><span>运营商网络</span></div><div class="network-list" id="operatorNetworks"></div></div>
+              <p class="coverage-disclaimer">当前为原型展示信息，不构成实时漫游承诺；实际可用运营商、5G 能力和网络切换规则以购买时套餐说明为准。</p>
+            </div>
+          </section>
+          <button class="device-row" id="deviceToggle" aria-expanded="false" aria-controls="deviceList" data-od-id="device-support-toggle"><span class="device-row-copy"><span class="device-row-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="3" width="10" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M10 6h4M11 18h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>支持的设备<small>12 个品牌 · 63 个型号组</small></span></span><svg class="device-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="device-list" id="deviceList" data-od-id="inline-device-list">
+            <div class="device-groups">
+              <section class="device-group" data-od-id="device-group-apple"><h3>Apple</h3><ul class="device-models"><li>iPhone 18 Pro、18 Pro Max</li><li>iPhone 17、17 Pro、17 Pro Max、17e</li><li>iPhone Air、iPhone Duo</li><li>iPhone 16、16 Plus、16 Pro、16 Pro Max、16e</li><li>iPhone 15、15 Plus、15 Pro、15 Pro Max</li><li>iPhone 14、14 Plus、14 Pro、14 Pro Max</li><li>iPhone 13、13 mini、13 Pro、13 Pro Max</li><li>iPhone 12、12 mini、12 Pro、12 Pro Max</li><li>iPhone 11、11 Pro、11 Pro Max</li><li>iPhone XS、XS Max、XR</li><li>iPhone SE（第 2、3 代）</li><li>iPad Pro 13 / 11 英寸（M4、M5）蜂窝版</li><li>iPad Air 13 / 11 英寸（M2、M3、M4）蜂窝版</li><li>iPad Pro 12.9 英寸（第 3–6 代）、11 英寸（第 1–4 代）蜂窝版</li><li>iPad Air（第 3–5 代）、iPad（第 7–10 代 / A16）蜂窝版</li><li>iPad mini（第 5、6 代 / A17 Pro）蜂窝版</li></ul></section>
+              <section class="device-group" data-od-id="device-group-google"><h3>Google</h3><ul class="device-models"><li>Pixel 10、10 Pro、10 Pro XL、10 Pro Fold</li><li>Pixel 9、9 Pro、9 Pro XL、9 Pro Fold、9a</li><li>Pixel 8、8 Pro、8a</li><li>Pixel 7、7 Pro、7a、Pixel Fold</li><li>Pixel 6、6 Pro、6a</li><li>Pixel 5、5a (5G)</li><li>Pixel 4、4 XL、4a、4a (5G)</li><li>Pixel 3a、3a XL</li></ul></section>
+              <section class="device-group" data-od-id="device-group-samsung"><h3>Samsung</h3><ul class="device-models"><li>Galaxy S26、S26+、S26 Ultra</li><li>Galaxy S25、S25+、S25 Ultra、S25 Edge、S25 FE</li><li>Galaxy S24、S24+、S24 Ultra、S24 FE</li><li>Galaxy S23、S23+、S23 Ultra、S23 FE</li><li>Galaxy S22、S22+、S22 Ultra</li><li>Galaxy S21、S21+、S21 Ultra</li><li>Galaxy S20、S20+、S20 Ultra</li><li>Galaxy Z TriFold、Z Fold7、Z Flip7、Z Flip7 FE</li><li>Galaxy Z Fold6 / Flip6 至 Fold3 / Flip3</li><li>Galaxy Fold、Z Fold2、Z Flip、Z Flip 5G</li><li>Galaxy A56、A36、A55、A35、A54</li><li>Galaxy XCover7、XCover7 Pro</li><li>Galaxy Tab S11 / S11 Ultra、Tab S10+ / S10 Ultra</li><li>Galaxy Tab S9 系列、S10 FE / FE+、S9 FE / FE+</li><li>Galaxy Tab Active5、Active5 Pro</li></ul></section>
+              <section class="device-group" data-od-id="device-group-xiaomi"><h3>Xiaomi</h3><ul class="device-models"><li>Xiaomi 17T</li><li>Xiaomi 15、15 Ultra</li><li>Xiaomi 14T、14T Pro</li></ul></section>
+              <section class="device-group" data-od-id="device-group-huawei"><h3>HUAWEI</h3><ul class="device-models"><li>HUAWEI P40、P40 Pro</li><li>HUAWEI Mate 40 Pro</li></ul></section>
+              <section class="device-group" data-od-id="device-group-oneplus"><h3>OnePlus</h3><ul class="device-models"><li>OnePlus Open、OnePlus 11</li><li>OnePlus 15R</li></ul></section>
+              <section class="device-group" data-od-id="device-group-honor"><h3>HONOR</h3><ul class="device-models"><li>HONOR Magic V2</li><li>HONOR Magic5 Pro</li></ul></section>
+              <section class="device-group" data-od-id="device-group-sony"><h3>Sony</h3><ul class="device-models"><li>Xperia 1 IV、Xperia 5 IV、Xperia 1 V</li><li>Xperia 1 VIII</li></ul></section>
+              <section class="device-group" data-od-id="device-group-motorola"><h3>Motorola</h3><ul class="device-models"><li>motorola razr（2019 / 2020）</li><li>motorola razr 40 ultra、razr+ 2024</li><li>motorola razr / razr+ / razr ultra（2025）</li><li>motorola razr / razr+（2026）、razr 70 / 70 plus / 70 ultra</li></ul></section>
+              <section class="device-group" data-od-id="device-group-hmd"><h3>HMD</h3><ul class="device-models"><li>HMD XR21</li></ul></section>
+              <section class="device-group" data-od-id="device-group-fairphone"><h3>Fairphone</h3><ul class="device-models"><li>Fairphone 5</li><li>Fairphone（Gen. 6 / Gen. 6+）</li></ul></section>
+              <section class="device-group" data-od-id="device-group-microsoft"><h3>Microsoft</h3><ul class="device-models"><li>Surface Pro X、Surface Pro（第 5 代）LTE Advanced</li><li>Surface Pro 7+ / Pro 8 LTE Advanced</li><li>Surface Pro 9 / Pro 10 商用版（5G）</li><li>Surface Pro（第 11 版）5G、Surface Pro 5G 商用版（第 12 版）</li><li>Surface Laptop 5G 商用版</li><li>Surface Go 3 LTE Advanced</li></ul></section>
+            </div>
+            <p class="device-list-note">目录依据厂商资料于 2026 年 11 月 5 日核验；具体仍以销售地区、硬件型号、系统版本和运营商锁状态为准。</p>
+            <div class="device-warning"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 2.8 20h18.4L12 3Z" stroke="currentColor" stroke-width="1.8"/><path d="M12 9v5M12 17.5v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>中国大陆、香港、澳门及部分运营商定制版本可能不支持 eSIM。最可靠的检查方式是在设备设置中确认是否存在 EID 或“添加 eSIM”。</span></div>
+          </div>
+          <div class="note"><strong>可以稍后激活吗？</strong>可以。演示流程假设购买后 30 天内完成首次激活；实际有效期应以接入供应商后的套餐规则为准。</div>
+          <div class="checkout-summary" data-od-id="checkout-summary">
+            <div class="summary-row"><span>已选套餐</span><strong id="summaryPlan">1 GB · 3 天</strong></div>
+            <div class="summary-row"><span>演示价格</span><strong id="summaryPrice">¥18</strong></div>
+            <a class="checkout-btn" id="checkoutButton" data-od-id="checkout-cta" aria-describedby="purchaseHint" href="checkout.html">立即购买</a>
+            <p class="purchase-hint" id="purchaseHint" role="status">选择有演示价格的套餐后即可直接结算。</p>
+            <div class="assurances"><span>✓ 安全支付</span><span>✓ 即时发送</span><span>✓ 无实体卡</span></div>
+          </div>
+          <section class="features" data-od-id="key-features"><h2>主要特点</h2><ul><li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 18h2v2H5v-2Zm4-4h2v6H9v-6Zm4-4h2v10h-2V10Zm4-4h2v14h-2V6Z" fill="currentColor"/></svg><span>覆盖当地优质移动网络</span></li><li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Zm11 0h2v2h-2v-2Zm3 0h2v6h-6v-2h4v-4Zm-4 3h2v3h-2v-3Z" stroke="currentColor" stroke-width="1.6"/></svg><span>扫码安装，到达后即可连接</span></li><li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M10 6h4M11 18h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>适用于支持 eSIM 的智能手机</span></li></ul></section>
+        </section>
+      </div>
+    </div>
+  </main>
+<footer class="site-footer" data-od-id="site-footer">
+    <div class="container"><div class="footer-grid">
+      <div class="footer-brand" data-od-id="footer-brand-contact"><a class="brand" href="index.html"><img class="brand-logo-img" src="assets/images/5gtrip-logo.png" width="2170" height="725" alt="5GTrip 智能出行"></a><div class="footer-contact" data-od-id="footer-contact-email"><span class="footer-contact-label">联系邮箱</span><a class="footer-email" href="mailto:service@5Gtrip.net"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span>service@5Gtrip.net</span></a></div><div class="footer-social" data-od-id="footer-social"><span class="footer-social-title">关注我们</span><div class="footer-social-icons" aria-label="Facebook、X 和 Instagram"><span class="footer-social-icon"><img src="assets/icons/facebook.svg" width="24" height="24" alt="Facebook"></span><span class="footer-social-icon"><img src="assets/icons/x.svg" width="24" height="24" alt="X"></span><span class="footer-social-icon"><img src="assets/icons/instagram.svg" width="24" height="24" alt="Instagram"></span></div></div></div><div><h3>eSIM</h3><ul><li><a href="faq.html">什么是 eSIM</a></li><li><a href="supported-devices.html">支持的设备</a></li><li><a href="download-app.html">下载 App</a></li><li><a href="how-to-use.html">激活指南</a></li></ul></div><div><h3>快速链接</h3><ul><li><a href="plans.html">全部目的地</a></li><li><a href="how-to-use.html">使用方式</a></li><li><a href="faq.html">常见问题</a></li><li><a href="travel-assistant.html">旅行助手</a></li></ul></div><div><h3>服务与条款</h3><ul><li><a href="privacy-policy.html">隐私政策</a></li><li><a href="terms-of-service.html">服务条款</a></li><li><a href="contact.html">联系我们</a></li><li><a href="refund-policy.html">退款说明</a></li></ul></div></div><div class="copyright">© 2026 5GTrip。当前页面为产品原型，不会创建真实订单或扣款。</div></div>
+  </footer>
+  <nav class="mobile-nav" aria-label="移动端导航"><a href="index.html"><span>⌂</span>首页</a><a href="plans.html"><span>◎</span>目的地</a><a class="active" href="#plans"><span>＋</span>选套餐</a></nav>
+  <div class="toast" id="toast" role="status">该套餐暂未配置演示价格</div>
+  <script>
+    const base='assets/images/flagcdn.com/';
+    const countryMap={
+      '英国':{flag:'gb-ac3c2fe020.png',network:'4G / 5G'},'美国':{flag:'us-d49da64286.png',network:'5G'},'法国':{flag:'fr-42015ce6e4.png',network:'4G / 5G'},
+      '爱尔兰':{flag:'ie-7d256680c2.png',network:'4G / 5G'},'荷兰':{flag:'nl-7e7f507ea4.png',network:'5G'},'比利时':{flag:'be-40b7e14a66.png',network:'4G / 5G'},
+      '德国':{flag:'de-dab4223a4e.png',network:'5G'},'阿尔巴尼亚':{flag:'al-dd4ab57691.png',network:'4G'},'阿尔及利亚':{flag:'dz-c10630d57c.png',network:'4G'},
+      '安道尔':{flag:'ad-e6e4f63885.png',network:'4G'},'安圭拉':{flag:'ai-f150f58a8a.png',network:'4G'},'安提瓜和巴布达':{flag:'ag-c65c11df0d.png',network:'4G'},
+      '阿根廷':{flag:'ar-0c5eff0d5f.png',network:'4G / 5G'},'亚美尼亚':{flag:'am-fec83e0785.png',network:'4G'},'阿鲁巴':{flag:'aw-d5a9796a82.png',network:'4G'},
+      '澳大利亚':{flag:'au-121498a53d.png',network:'5G'},'奥兰群岛':{flag:'ax-7018cca48c.png',network:'4G'},'阿富汗':{flag:'af-955b506fdd.png',network:'4G'},
+      '欧洲多国':{flag:'gb-ac3c2fe020.png',network:'4G / 5G'},'亚洲多国':{flag:'au-121498a53d.png',network:'4G / 5G'},'北美洲':{flag:'us-d49da64286.png',network:'4G / 5G'},
+      '拉丁美洲':{flag:'ar-0c5eff0d5f.png',network:'4G / 5G'},'加勒比地区':{flag:'ag-c65c11df0d.png',network:'4G'},'巴尔干地区':{flag:'al-dd4ab57691.png',network:'4G / 5G'},
+      '全球畅游':{flag:'us-d49da64286.png',network:'4G / 5G'}
+    };
+    const coverageMap={
+      '英国':{countries:['英国'],operators:[['EE','4G / 5G'],['O2','4G / 5G'],['Vodafone','4G / 5G'],['Three','4G / 5G']]},
+      '美国':{countries:['美国'],operators:[['AT&T','4G / 5G'],['T-Mobile','4G / 5G'],['Verizon','4G / 5G']]},
+      '法国':{countries:['法国'],operators:[['Orange','4G / 5G'],['SFR','4G / 5G'],['Bouygues Telecom','4G / 5G'],['Free Mobile','4G / 5G']]},
+      '爱尔兰':{countries:['爱尔兰'],operators:[['Vodafone IE','4G / 5G'],['Three IE','4G / 5G'],['eir','4G / 5G']]},
+      '荷兰':{countries:['荷兰'],operators:[['KPN','4G / 5G'],['Odido','4G / 5G'],['VodafoneZiggo','4G / 5G']]},
+      '比利时':{countries:['比利时'],operators:[['Proximus','4G / 5G'],['Orange Belgium','4G / 5G'],['BASE','4G / 5G']]},
+      '德国':{countries:['德国'],operators:[['Telekom','4G / 5G'],['Vodafone DE','4G / 5G'],['O2 Telefónica','4G / 5G']]},
+      '澳大利亚':{countries:['澳大利亚'],operators:[['Telstra','4G / 5G'],['Optus','4G / 5G'],['Vodafone AU','4G / 5G']]},
+      '欧洲多国':{countries:['英国','法国','德国','荷兰','比利时','爱尔兰'],operators:[['欧洲合作网络','自动选择'],['主要城市','4G / 5G']]},
+      '亚洲多国':{countries:['日本','韩国','新加坡','泰国','马来西亚','印度尼西亚'],operators:[['亚洲合作网络','自动选择'],['主要城市','4G / 5G']]},
+      '北美洲':{countries:['美国','加拿大','墨西哥'],operators:[['北美合作网络','自动选择'],['主要城市','4G / 5G']]},
+      '拉丁美洲':{countries:['阿根廷','巴西','智利','哥伦比亚','秘鲁'],operators:[['拉美合作网络','自动选择'],['主要城市','4G / 5G']]},
+      '加勒比地区':{countries:['安提瓜和巴布达','阿鲁巴','安圭拉'],operators:[['加勒比合作网络','自动选择'],['覆盖地区','4G']]},
+      '巴尔干地区':{countries:['阿尔巴尼亚','黑山','塞尔维亚','北马其顿'],operators:[['巴尔干合作网络','自动选择'],['主要城市','4G / 5G']]},
+      '全球畅游':{countries:['英国','美国','法国','德国','澳大利亚','日本'],operators:[['全球合作网络','自动选择'],['重点目的地','4G / 5G']]}
+    };
+    const demoPlans=[
+      {data:'1 GB',days:'3 天',price:'¥18'},{data:'3 GB',days:'7 天',price:'¥32'},{data:'5 GB',days:'15 天',price:'¥48'},
+      {data:'10 GB',days:'30 天',price:'¥72'},{data:'20 GB',days:'30 天',price:'¥108'},{data:'50 GB',days:'90 天',price:'¥168'}
+    ];
+    const params=new URLSearchParams(location.search),requested=params.get('country')||'英国';
+    const country=countryMap[requested]?requested:'英国',info=countryMap[country];let selected=demoPlans[0];
+    const title=document.querySelector('#countryTitle'),flag=document.querySelector('#countryFlag'),lead=document.querySelector('#countryLead');
+    document.title=`${country} eSIM 套餐｜5GTrip`;title.textContent=`${country} eSIM`;document.querySelector('#crumbCountry').textContent=country;flag.src=base+info.flag;flag.alt=`${country}旗帜`;
+    lead.textContent=`为${country}旅行选择灵活的 ${info.network} 高速流量套餐。当前价格为界面演示数据，接入真实供应商接口后更新。`;
+    const coverage=coverageMap[country]||{countries:[country],operators:[['当地合作网络',info.network],['网络选择','自动切换']]};
+    document.querySelector('#coverageCountries').innerHTML=coverage.countries.map(name=>`<span class="coverage-chip">${name}</span>`).join('');
+    document.querySelector('#operatorNetworks').innerHTML=coverage.operators.map(([name,network])=>`<div class="network-item"><strong>${name}</strong><span>${network}</span></div>`).join('');
+    const grid=document.querySelector('#planGrid');
+    function renderPlans(){grid.innerHTML=demoPlans.map((plan,index)=>`<button class="plan-card" aria-pressed="${plan===selected}" data-index="${index}" data-od-id="plan-card-${index}"><i aria-hidden="true"></i><strong>${plan.data}</strong><span>${plan.days}</span><b>${plan.price}</b><small class="plan-demo-label">演示价</small></button>`).join('');document.querySelectorAll('.plan-card').forEach(card=>card.addEventListener('click',()=>{selected=demoPlans[Number(card.dataset.index)];document.querySelector('#unlimitedDays').value='';updateSummary();renderPlans();updatePurchaseState()}))}
+    function updateSummary(){const unlimited=document.querySelector('#unlimitedDays').value;const plan=unlimited?`不限量 · ${unlimited} 天`:`${selected.data} · ${selected.days}`;const price=unlimited?'待接入':selected.price;document.querySelector('#summaryPlan').textContent=plan;document.querySelector('#summaryPrice').textContent=price}
+    document.querySelector('#unlimitedDays').addEventListener('change',updateSummary);renderPlans();updateSummary();
+    const deviceToggle=document.querySelector('#deviceToggle'),deviceList=document.querySelector('#deviceList');deviceToggle.addEventListener('click',()=>{const open=deviceToggle.getAttribute('aria-expanded')==='true';deviceToggle.setAttribute('aria-expanded',String(!open));deviceList.classList.toggle('open',!open)});
+    const purchaseButton=document.querySelector('#checkoutButton'),purchaseHint=document.querySelector('#purchaseHint');
+    function selectedItem(){return {country,flag:info.flag,plan:`${selected.data} · ${selected.days}`,price:Number(selected.price.replace(/[^0-9.]/g,'')),quantity:1}}
+    function updatePurchaseState(){const unavailable=Boolean(document.querySelector('#unlimitedDays').value);purchaseButton.textContent=unavailable?'请先选择有价格的套餐':'立即购买';purchaseButton.setAttribute('aria-disabled',String(unavailable));if(unavailable)purchaseButton.removeAttribute('href');else purchaseButton.href=`checkout.html?item=${encodeURIComponent(JSON.stringify(selectedItem()))}`;purchaseHint.textContent=unavailable?'不限量套餐尚未配置演示价格，请选择上方定量套餐。':'选择有演示价格的套餐后即可直接结算。'}
+    document.querySelector('#unlimitedDays').addEventListener('change',updatePurchaseState);updatePurchaseState();
+    purchaseButton.addEventListener('click',event=>{if(purchaseButton.getAttribute('aria-disabled')==='true'){event.preventDefault();return}try{localStorage.setItem('5gtrip-direct-checkout',JSON.stringify({item:selectedItem(),createdAt:Date.now()}))}catch{}});
+  </script>
+  <script src="assets/form-accessibility.js" defer></script>
+  <script src="assets/language-selector.js" defer></script>
+  <script src="assets/support-chat.js" defer></script>
+</body>
+</html>

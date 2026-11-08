@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="查看 5GTrip 已依据设备厂商官方资料核验的 eSIM 兼容手机、平板与电脑，并了解地区版本和运营商锁限制。">
+  <title>eSIM 支持设备｜5GTrip</title>
+  <link rel="icon" href="assets/5gtrip-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/product-pages.css">
+  <link rel="stylesheet" href="assets/language-selector.css">
+</head>
+<body>
+  <a class="skip" href="#deviceCatalog">跳到设备列表</a>
+  <div class="topbar">同名设备可能因销售地区不同而不支持 eSIM，购买前请检查 EID</div>
+  <header class="site-header" data-od-id="site-header"><div class="container inner"><a class="brand" href="index.html" data-od-id="brand-logo"><img class="brand-logo-img" src="assets/images/5gtrip-logo.png" width="2170" height="725" alt="5GTrip 智能出行"></a><nav class="site-nav" aria-label="主导航" data-od-id="primary-navigation"><a href="plans.html">全部目的地</a><a href="how-to-use.html">使用方式</a><a href="faq.html" data-od-id="nav-faq-link">常见问题</a><a href="account.html">账户</a><a class="nav-cta" href="plans.html">获取 eSIM</a></nav></div></header>
+  <main class="devices-main" data-od-id="supported-devices-page">
+    <section class="devices-hero" data-od-id="devices-heading"><div class="container devices-hero-grid"><div><span class="help-kicker">兼容性目录 · 2026 年 11 月 5 日核验</span><h1>你的设备<br>支持 eSIM 吗？</h1><p>按品牌或型号搜索厂商已确认具备 eSIM 能力的设备。最终可用性仍取决于销售地区、具体型号、系统版本和运营商锁定状态。</p></div><div class="device-verify-card surface-card"><strong>30 秒自检</strong><ol><li><b>1</b><span>打开“设置 → 关于本机/设备信息”</span></li><li><b>2</b><span>查找 <em>EID</em>，或在移动网络中查找“添加 eSIM”</span></li><li><b>3</b><span>确认设备未被原运营商锁定</span></li></ol><p>能看到 EID 通常表示设备内置 eSIM 芯片；仍需确认套餐覆盖的网络频段。</p></div></div></section>
+    <section class="device-alert" data-od-id="regional-warning"><div class="container"><div class="device-alert-grid"><div><span>!</span><p><strong>地区版本是最常见的兼容性陷阱</strong>中国大陆、香港、澳门及部分运营商定制版本可能采用双实体 SIM，或关闭 eSIM。Apple 官方资料也明确列出中国大陆机型的特殊限制。</p></div><a href="https://support.apple.com/en-ie/118569" target="_blank" rel="noopener">查看 Apple 官方说明 ↗</a></div></div></section>
+    <section class="device-catalog-section" id="deviceCatalog" data-od-id="device-catalog"><div class="container"><header class="device-catalog-head"><div><span class="help-kicker">官方资料核验范围</span><h2>支持设备目录</h2><p>这里的“完整”指下方厂商官方资料可明确核验的型号范围，不代表全球所有地区版本都可用。</p></div><div class="device-result"><strong id="deviceCount">0</strong><span>个型号组</span></div></header><div class="device-controls surface-card"><div class="device-search"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><label class="skip" for="deviceSearch">搜索设备型号</label><input id="deviceSearch" type="search" autocomplete="off" placeholder="搜索型号，例如 iPhone 15、Galaxy S24、Pixel 9"><button id="clearDeviceSearch" type="button" aria-label="清空搜索" hidden>×</button></div><label class="device-brand-filter"><span>品牌</span><select id="brandFilter" aria-label="按品牌筛选"><option value="all">全部品牌</option></select></label><div class="device-type-tabs" role="tablist" aria-label="设备类型"><button role="tab" aria-selected="true" data-type="all">全部</button><button role="tab" aria-selected="false" data-type="phone">手机</button><button role="tab" aria-selected="false" data-type="tablet">平板</button><button role="tab" aria-selected="false" data-type="computer">电脑</button></div></div><div class="device-directory" id="deviceDirectory" aria-live="polite"></div><div class="faq-empty surface-card" id="deviceEmpty" hidden><strong>没有找到匹配型号</strong><p>检查拼写或改用品牌系列搜索；如果型号未列出，请以设备中的 EID 和厂商规格页为准。</p><button type="button" id="resetDevices">查看全部设备</button></div></div></section>
+    <section class="device-rules" data-od-id="compatibility-rules"><div class="container"><header class="guide-section-head centered"><span>购买前最后确认</span><h2>型号在列表里，也要满足这些条件</h2></header><div class="check-grid"><article class="surface-card"><b>没有运营商锁</b><p>被锁定的设备可能只能使用原运营商套餐。Apple、Google 等厂商均建议先向原运营商确认解锁状态。</p></article><article class="surface-card"><b>是支持 eSIM 的地区版本</b><p>同一商品名称可能对应不同硬件型号。检查设置中的 EID，比只看系列名称更可靠。</p></article><article class="surface-card"><b>系统和网络正常</b><p>安装前更新系统并连接稳定 Wi-Fi；旅行套餐能否联网还取决于目的地频段和当地合作网络。</p></article></div><div class="support-strip surface-card"><div><strong>设备确认完成后</strong><p>继续查看安装步骤，出发前完成配置，抵达目的地后再切换移动数据线路。</p></div><a class="secondary-btn" href="how-to-use.html">查看使用方式</a></div></div></section>
+    <section class="device-sources" data-od-id="official-sources"><div class="container"><header class="guide-section-head"><span>资料来源</span><h2>厂商官方核验入口</h2><p>设备能力会随新品、地区版本和软件更新变化。目录以厂商资料为准，建议在购买前再次打开对应来源核对。</p></header><div class="source-grid" id="sourceGrid"></div></div></section>
+  </main>
+<footer class="site-footer" data-od-id="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand" data-od-id="footer-brand-contact"><a class="brand" href="index.html"><img class="brand-logo-img" src="assets/images/5gtrip-logo.png" width="2170" height="725" alt="5GTrip 智能出行"></a><div class="footer-contact" data-od-id="footer-contact-email"><span class="footer-contact-label">联系邮箱</span><a class="footer-email" href="mailto:service@5Gtrip.net"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span>service@5Gtrip.net</span></a></div><div class="footer-social" data-od-id="footer-social"><span class="footer-social-title">关注我们</span><div class="footer-social-icons" aria-label="Facebook、X 和 Instagram"><span class="footer-social-icon"><img src="assets/icons/facebook.svg" width="24" height="24" alt="Facebook"></span><span class="footer-social-icon"><img src="assets/icons/x.svg" width="24" height="24" alt="X"></span><span class="footer-social-icon"><img src="assets/icons/instagram.svg" width="24" height="24" alt="Instagram"></span></div></div></div><div><h3>eSIM</h3><ul><li><a href="faq.html">什么是 eSIM</a></li><li><a href="supported-devices.html">支持的设备</a></li><li><a href="download-app.html">下载 App</a></li><li><a href="how-to-use.html">激活指南</a></li></ul></div><div><h3>快速链接</h3><ul><li><a href="plans.html">全部目的地</a></li><li><a href="how-to-use.html">使用方式</a></li><li><a href="faq.html">常见问题</a></li><li><a href="travel-assistant.html">旅行助手</a></li></ul></div><div><h3>服务与条款</h3><ul><li><a href="privacy-policy.html">隐私政策</a></li><li><a href="terms-of-service.html">服务条款</a></li><li><a href="contact.html">联系我们</a></li><li><a href="refund-policy.html">退款说明</a></li></ul></div></div><div class="copyright">© 2026 SIVYA Technology Limited（斯威亞科技有限公司）。设备目录不替代厂商型号页、运营商解锁确认或当地网络兼容性检查。</div></div></footer>
+  <nav class="mobile-nav" aria-label="移动端导航"><a href="index.html"><span>⌂</span>首页</a><a href="plans.html"><span>◎</span>套餐</a><a class="active" href="supported-devices.html"><span>▣</span>设备</a></nav>
+  <script>
+    const sources={
+      Apple:{url:'https://support.apple.com/en-ie/118569',label:'Apple 支持：iPhone 与 iPad 使用的 SIM 类型'},
+      Google:{url:'https://support.google.com/pixelphone/answer/9449293?hl=zh-Hans',label:'Google Pixel 帮助：双 SIM 与 eSIM'},
+      Samsung:{url:'https://www.samsung.com/pk/support/mobile-devices/galaxy-esim-and-supported-network-carriers/',label:'Samsung 支持：Galaxy eSIM 设备'},
+      Xiaomi:{url:'https://www.mi.com/global/support/esim/?lang=en',label:'Xiaomi 支持：eSIM 设备与运营商'},
+      HUAWEI:{url:'https://consumer.huawei.com/rs/support/content/sr-latn15789961/',label:'HUAWEI 支持：适用 eSIM 产品'},
+      OnePlus:{url:'https://service.oneplus.com/au/search/search-detail?id=2151423',label:'OnePlus 支持：eSIM 功能'},
+      HONOR:{url:'https://www.honor.com/content/dam/honor/pl/support/product-manual/honor-magic-v2-ug.pdf',label:'HONOR Magic V2 官方手册'},
+      Sony:{url:'https://www.sony.com/electronics/support/articles/SX524401',label:'Sony 支持：Xperia 双 SIM 地区版本'},
+      Motorola:{url:'https://en-us.support.motorola.com/app/answers/detail/a_id/148241/~/esim-activation-instructions---razr',label:'Motorola 支持：razr eSIM'},
+      HMD:{url:'https://www.hmd.com/en_int/support/hmd-xr21-user-guide/use-esim?locale=en-USA',label:'HMD XR21 官方用户指南'},
+      Fairphone:{url:'https://support.fairphone.com/hc/en-us/article_attachments/29169690430866',label:'Fairphone Gen. 6 官方入门指南'},
+      Microsoft:{url:'https://support.microsoft.com/en-gb/surface/wifi-cellular/set-up-the-lte-or-5g-connection-on-your-surface',label:'Microsoft 支持：Surface LTE / 5G 与 eSIM'}
+    };
+    const devices=[
+      {brand:'Apple',type:'phone',models:'iPhone 18 Pro、iPhone 18 Pro Max',note:'以官方地区型号说明为准'},
+      {brand:'Apple',type:'phone',models:'iPhone 17、17 Pro、17 Pro Max、17e',note:'部分销售地区为仅 eSIM'},
+      {brand:'Apple',type:'phone',models:'iPhone Air、iPhone Duo',note:'中国大陆支持范围按 Apple 最新型号说明核对'},
+      {brand:'Apple',type:'phone',models:'iPhone 16、16 Plus、16 Pro、16 Pro Max、16e',note:'美国版为仅 eSIM；其他地区版本可能不同'},
+      {brand:'Apple',type:'phone',models:'iPhone 15、15 Plus、15 Pro、15 Pro Max',note:'美国版为仅 eSIM'},
+      {brand:'Apple',type:'phone',models:'iPhone 14、14 Plus、14 Pro、14 Pro Max',note:'美国版为仅 eSIM'},
+      {brand:'Apple',type:'phone',models:'iPhone 13、13 mini、13 Pro、13 Pro Max',note:'支持双 eSIM'},
+      {brand:'Apple',type:'phone',models:'iPhone 12、12 mini、12 Pro、12 Pro Max',note:'支持单 eSIM 与实体 SIM 组合'},
+      {brand:'Apple',type:'phone',models:'iPhone 11、11 Pro、11 Pro Max',note:'地区版本可能不同'},
+      {brand:'Apple',type:'phone',models:'iPhone XS、XS Max、XR',note:'首批支持 eSIM 的 iPhone 系列'},
+      {brand:'Apple',type:'phone',models:'iPhone SE（第 2、3 代）',note:'按销售地区确认'},
+      {brand:'Apple',type:'tablet',models:'iPad Pro 13 英寸 / 11 英寸（M4、M5）蜂窝版',note:'仅蜂窝网络版本'},
+      {brand:'Apple',type:'tablet',models:'iPad Air 13 英寸 / 11 英寸（M2、M3、M4）蜂窝版',note:'仅蜂窝网络版本'},
+      {brand:'Apple',type:'tablet',models:'iPad Pro 12.9 英寸（第 3–6 代）、11 英寸（第 1–4 代）蜂窝版',note:'仅蜂窝网络版本'},
+      {brand:'Apple',type:'tablet',models:'iPad Air（第 3–5 代）、iPad（第 7–10 代 / A16）蜂窝版',note:'仅蜂窝网络版本'},
+      {brand:'Apple',type:'tablet',models:'iPad mini（第 5、6 代 / A17 Pro）蜂窝版',note:'仅蜂窝网络版本'},
+      {brand:'Google',type:'phone',models:'Pixel 10、10 Pro、10 Pro XL、10 Pro Fold',note:'美国部分型号为仅 eSIM'},
+      {brand:'Google',type:'phone',models:'Pixel 9、9 Pro、9 Pro XL、9 Pro Fold、9a',note:'按运营商与地区确认'},
+      {brand:'Google',type:'phone',models:'Pixel 8、8 Pro、8a',note:'支持 eSIM'},
+      {brand:'Google',type:'phone',models:'Pixel 7、7 Pro、7a、Pixel Fold',note:'可在运营商允许时同时使用两个 eSIM'},
+      {brand:'Google',type:'phone',models:'Pixel 6、6 Pro、6a',note:'支持 eSIM'},
+      {brand:'Google',type:'phone',models:'Pixel 5、5a (5G)',note:'支持 eSIM'},
+      {brand:'Google',type:'phone',models:'Pixel 4、4 XL、4a、4a (5G)',note:'支持 eSIM'},
+      {brand:'Google',type:'phone',models:'Pixel 3a、3a XL',note:'日本销售版本存在双 SIM 限制'},
+      {brand:'Samsung',type:'phone',models:'Galaxy S26、S26+、S26 Ultra',note:'地区支持可能不同'},
+      {brand:'Samsung',type:'phone',models:'Galaxy S25、S25+、S25 Ultra、S25 Edge、S25 FE',note:'地区支持可能不同'},
+      {brand:'Samsung',type:'phone',models:'Galaxy S24、S24+、S24 Ultra、S24 FE',note:'地区支持可能不同'},
+      {brand:'Samsung',type:'phone',models:'Galaxy S23、S23+、S23 Ultra、S23 FE',note:'地区支持可能不同'},
+      {brand:'Samsung',type:'phone',models:'Galaxy S22、S22+、S22 Ultra',note:'地区支持可能不同'},
+      {brand:'Samsung',type:'phone',models:'Galaxy S21、S21+、S21 Ultra',note:'地区支持可能不同'},
+      {brand:'Samsung',type:'phone',models:'Galaxy S20、S20+、S20 Ultra',note:'部分地区版本'},
+      {brand:'Samsung',type:'phone',models:'Galaxy Z TriFold、Z Fold7、Z Flip7、Z Flip7 FE',note:'地区支持可能不同'},
+      {brand:'Samsung',type:'phone',models:'Galaxy Z Fold6 / Flip6、Fold5 / Flip5、Fold4 / Flip4、Fold3 / Flip3',note:'地区支持可能不同'},
+      {brand:'Samsung',type:'phone',models:'Galaxy Fold、Z Fold2、Z Flip、Z Flip 5G',note:'早期折叠屏地区版本需核对'},
+      {brand:'Samsung',type:'phone',models:'Galaxy A56、A36、A55、A35、A54',note:'仅欧洲、北美、韩国、日本等部分地区版本'},
+      {brand:'Samsung',type:'phone',models:'Galaxy XCover7、XCover7 Pro',note:'地区支持可能不同'},
+      {brand:'Samsung',type:'tablet',models:'Galaxy Tab S11、S11 Ultra、Tab S10+、S10 Ultra',note:'仅具备蜂窝网络与 eSIM 的版本'},
+      {brand:'Samsung',type:'tablet',models:'Galaxy Tab S9、S9+、S9 Ultra、S10 FE / FE+、S9 FE / FE+',note:'仅具备蜂窝网络与 eSIM 的版本'},
+      {brand:'Samsung',type:'tablet',models:'Galaxy Tab Active5、Active5 Pro',note:'地区支持可能不同'},
+      {brand:'Xiaomi',type:'phone',models:'Xiaomi 17T',note:'全球版规格页确认；地区与运营商可能不同'},
+      {brand:'Xiaomi',type:'phone',models:'Xiaomi 15、Xiaomi 15 Ultra',note:'官方支持页确认可配置 eSIM 卡槽'},
+      {brand:'Xiaomi',type:'phone',models:'Xiaomi 14T、Xiaomi 14T Pro',note:'官方支持页确认可配置 eSIM 卡槽'},
+      {brand:'HUAWEI',type:'phone',models:'HUAWEI P40、P40 Pro',note:'仅部分单卡/双卡与地区版本；P40 Pro+ 不在核验范围'},
+      {brand:'HUAWEI',type:'phone',models:'HUAWEI Mate 40 Pro',note:'仅部分地区与硬件版本'},
+      {brand:'OnePlus',type:'phone',models:'OnePlus Open、OnePlus 11',note:'官方支持页列举；地区与运营商可能不同'},
+      {brand:'OnePlus',type:'phone',models:'OnePlus 15R',note:'加拿大官方规格页确认；其他地区版本需核对'},
+      {brand:'HONOR',type:'phone',models:'HONOR Magic V2',note:'官方用户手册包含 eSIM 功能；地区支持可能不同'},
+      {brand:'HONOR',type:'phone',models:'HONOR Magic5 Pro',note:'官方用户手册包含 eSIM 功能；地区支持可能不同'},
+      {brand:'Sony',type:'phone',models:'Xperia 1 IV、Xperia 5 IV、Xperia 1 V',note:'仅 XQ-CT54 / XQ-CQ54 / XQ-DQ54 等部分地区版本'},
+      {brand:'Sony',type:'phone',models:'Xperia 1 VIII',note:'官方支持页列出的部分地区版本；美国版 Xperia 不支持 eSIM'},
+      {brand:'Motorola',type:'phone',models:'motorola razr（2019 / 2020）',note:'部分版本采用 eSIM；按运营商确认'},
+      {brand:'Motorola',type:'phone',models:'motorola razr 40 ultra、razr+ 2024',note:'部分销售地区支持 eSIM'},
+      {brand:'Motorola',type:'phone',models:'motorola razr / razr+ / razr ultra（2025）',note:'官方手册提示部分版本支持 eSIM'},
+      {brand:'Motorola',type:'phone',models:'motorola razr / razr+（2026）、razr 70 / 70 plus / 70 ultra',note:'功能随国家和服务商变化'},
+      {brand:'HMD',type:'phone',models:'HMD XR21',note:'支持添加并存储多个 eSIM 配置'},
+      {brand:'Fairphone',type:'phone',models:'Fairphone 5',note:'官方入门资料提供 eSIM 入口'},
+      {brand:'Fairphone',type:'phone',models:'Fairphone（Gen. 6 / Gen. 6+）',note:'支持实体 SIM 与一个 eSIM 双卡组合'},
+      {brand:'Microsoft',type:'computer',models:'Surface Pro X、Surface Pro（第 5 代）LTE Advanced',note:'使用 Windows 移动套餐或运营商 eSIM'},
+      {brand:'Microsoft',type:'computer',models:'Surface Pro 7+ / Pro 8 LTE Advanced',note:'仅蜂窝网络版本'},
+      {brand:'Microsoft',type:'computer',models:'Surface Pro 9 / Pro 10 商用版（5G）',note:'仅 5G 版本'},
+      {brand:'Microsoft',type:'computer',models:'Surface Pro（第 11 版）5G、Surface Pro 5G 商用版（第 12 版）',note:'仅 5G 版本'},
+      {brand:'Microsoft',type:'computer',models:'Surface Laptop 5G 商用版',note:'仅 5G 版本'},
+      {brand:'Microsoft',type:'computer',models:'Surface Go 3 LTE Advanced',note:'Microsoft 官方 eSIM 设置页列入适用范围'}
+    ];
+    const typeNames={phone:'手机',tablet:'平板',computer:'电脑'},directory=document.querySelector('#deviceDirectory'),search=document.querySelector('#deviceSearch'),clear=document.querySelector('#clearDeviceSearch'),brandFilter=document.querySelector('#brandFilter'),empty=document.querySelector('#deviceEmpty'),count=document.querySelector('#deviceCount');let activeType='all';
+    [...new Set(devices.map(item=>item.brand))].forEach(brand=>brandFilter.insertAdjacentHTML('beforeend',`<option value="${brand}">${brand}</option>`));
+    function render(){const keyword=search.value.trim().toLowerCase(),brand=brandFilter.value,visible=devices.filter(item=>(activeType==='all'||item.type===activeType)&&(brand==='all'||item.brand===brand)&&(!keyword||`${item.brand} ${item.models} ${item.note}`.toLowerCase().includes(keyword))),brands=[...new Set(visible.map(item=>item.brand))];directory.innerHTML=brands.map(name=>{const items=visible.filter(item=>item.brand===name);return `<section class="device-brand-group surface-card" data-od-id="device-brand-${name.toLowerCase().replace(/[^a-z0-9]+/g,'-')}"><header><div><span>${items.length} 个型号组</span><h3>${name}</h3></div><a href="${sources[name].url}" target="_blank" rel="noopener" aria-label="查看 ${name} 官方资料">官方资料 ↗</a></header><div>${items.map(item=>`<article><span>${typeNames[item.type]}</span><div><strong>${item.models}</strong><p>${item.note}</p></div></article>`).join('')}</div></section>`}).join('');count.textContent=visible.length;empty.hidden=visible.length>0;clear.hidden=!search.value;}
+    document.querySelectorAll('.device-type-tabs button').forEach(button=>button.addEventListener('click',()=>{activeType=button.dataset.type;document.querySelectorAll('.device-type-tabs button').forEach(item=>item.setAttribute('aria-selected',String(item===button)));render()}));search.addEventListener('input',render);brandFilter.addEventListener('change',render);clear.addEventListener('click',()=>{search.value='';search.focus();render()});document.querySelector('#resetDevices').addEventListener('click',()=>{search.value='';brandFilter.value='all';activeType='all';document.querySelectorAll('.device-type-tabs button').forEach((item,index)=>item.setAttribute('aria-selected',String(index===0)));render()});document.querySelector('#sourceGrid').innerHTML=Object.entries(sources).map(([brand,source])=>`<a class="source-card surface-card" href="${source.url}" target="_blank" rel="noopener"><span>${brand}</span><strong>${source.label}</strong><b>打开来源 ↗</b></a>`).join('');render();
+  </script>
+  <script src="assets/language-selector.js" defer></script>
+  <script src="assets/support-chat.js" defer></script>
+</body>
+</html>

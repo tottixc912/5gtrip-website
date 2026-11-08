@@ -1,0 +1,44 @@
+/* Poppins self-hosted font files captured from the reference site */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./fonts.gstatic.com/pxiByp8kv8JHgFVrLDz8Z1xlFd2JQEk-d15512f092.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts.gstatic.com/pxiEyp8kv8JHgFVrJJfecnFHGPc-350a5a7da2.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./fonts.gstatic.com/pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk-789778bf13.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./fonts.gstatic.com/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk-52afdafffd.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts.gstatic.com/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk-061e20df9f.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('./fonts.gstatic.com/pxiByp8kv8JHgFVrLDD4Z1xlFd2JQEk-855190bbaa.woff2') format('woff2');
+}
+

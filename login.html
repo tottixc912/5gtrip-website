@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="登录 5GTrip 演示账户，管理旅行 eSIM 和订单。">
+  <title>登录｜5GTrip</title>
+  <link rel="icon" href="assets/5gtrip-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/product-pages.css">
+  <link rel="stylesheet" href="assets/language-selector.css">
+</head>
+<body class="auth-page">
+  <a class="skip" href="#loginForm">跳到登录表单</a>
+  <div class="topbar">账户登录 · 当前页面仅用于本地产品演示</div>
+  <header class="site-header" data-od-id="site-header"><div class="container inner"><a class="brand" href="index.html" data-od-id="brand-logo"><img class="brand-logo-img" src="assets/images/5gtrip-logo.png" width="2170" height="725" alt="5GTrip 智能出行"></a><nav class="site-nav" aria-label="主导航" data-od-id="primary-navigation"><a href="plans.html">全部目的地</a><a href="how-to-use.html">使用方式</a><a href="faq.html">常见问题</a><a href="account.html">账户</a><a class="nav-cta" href="plans.html">获取 eSIM</a></nav></div></header>
+  <main class="auth-main" data-od-id="login-page"><div class="container auth-layout"><section class="auth-visual" data-od-id="login-intro"><span class="auth-kicker">5GTrip 账户</span><h1>一处管理每段旅程</h1><p>查看订单、安装 eSIM、管理接收邮箱，并在新设备上继续你的行程。</p><div class="auth-benefits"><span>✓ 订单状态集中查看</span><span>✓ eSIM 安装信息随时访问</span><span>✓ 资料仅保存在当前浏览器</span></div><div class="signal-lines" aria-hidden="true"><i></i><i></i><i></i></div></section><section class="surface-card auth-card" data-od-id="login-card"><div class="auth-card-head"><span>欢迎回来</span><h2>登录 5GTrip</h2><p>使用下方演示账号体验账户流程。</p></div><div class="demo-credentials"><div><span>演示邮箱</span><code>demo@5gtrip.example</code></div><div><span>演示密码</span><code>Trip2026</code></div></div><form id="loginForm" novalidate><div class="field"><label for="loginEmail">电子邮箱</label><input id="loginEmail" name="email" type="email" autocomplete="email" required placeholder="name@example.com"><span class="field-error" data-error="email"></span></div><div class="field"><label for="loginPassword">密码</label><div class="password-field"><input id="loginPassword" name="password" type="password" autocomplete="current-password" required placeholder="输入演示密码"><button type="button" id="togglePassword" aria-label="显示密码">显示</button></div><span class="field-error" data-error="password"></span></div><div class="auth-options"><label><input id="remember" type="checkbox" checked> 保持本地登录</label><button id="forgotPassword" type="button">忘记密码？</button></div><button class="primary-wide" type="submit" data-od-id="login-cta">登录账户</button><p class="auth-switch">还没有账户？<a href="register.html">创建演示账户</a></p><p class="auth-disclaimer">不会连接真实认证服务，也不会发送或保存真实密码。</p></form></section></div></main>
+  <footer class="auth-footer"><div class="container"><span>© 2026 5GTrip</span><nav aria-label="页脚链接"><a href="privacy-policy.html">隐私政策</a><a href="terms-of-service.html">服务条款</a><a href="faq.html">帮助中心</a><a href="contact.html">联系我们</a></nav></div></footer><div class="toast" id="toast" role="status"></div>
+  <script>
+    const form=document.querySelector('#loginForm'),email=document.querySelector('#loginEmail'),password=document.querySelector('#loginPassword'),toast=document.querySelector('#toast');
+    function setError(id,message){document.querySelector(`[data-error="${id}"]`).textContent=message;document.querySelector(`#login${id[0].toUpperCase()+id.slice(1)}`).classList.toggle('invalid',!!message)}
+    document.querySelector('#togglePassword').addEventListener('click',event=>{const showing=password.type==='text';password.type=showing?'password':'text';event.currentTarget.textContent=showing?'显示':'隐藏';event.currentTarget.setAttribute('aria-label',showing?'显示密码':'隐藏密码')});
+    document.querySelector('#forgotPassword').addEventListener('click',()=>{location.href='forgot-password.html'});
+    form.addEventListener('submit',event=>{event.preventDefault();setError('email','');setError('password','');let valid=true;if(!/^\S+@\S+\.\S+$/.test(email.value.trim())){setError('email','请输入有效邮箱');valid=false}if(!password.value){setError('password','请输入密码');valid=false}if(!valid)return;if(email.value.trim().toLowerCase()!=='demo@5gtrip.example'||password.value!=='Trip2026'){setError('password','演示账号或密码不正确');return}const session={name:'5GTrip 演示用户',email:'demo@5gtrip.example',phone:'',country:'中国大陆',signedInAt:new Date().toISOString(),demo:true};localStorage.setItem('5gtrip-session',JSON.stringify(session));location.href='account.html'});
+  </script>
+  <script src="assets/form-accessibility.js" defer></script>
+  <script src="assets/language-selector.js" defer></script>
+  <script src="assets/support-chat.js" defer></script>
+</body>
+</html>
