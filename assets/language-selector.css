@@ -7,9 +7,9 @@
 .language-trigger{
   min-width:0;
   min-height:44px;
-  padding:0;
-  border:0;
-  border-radius:8px;
+  padding:0 10px;
+  border:1px solid transparent;
+  border-radius:10px;
   background:transparent;
   color:var(--muted);
   display:inline-flex;
@@ -22,7 +22,7 @@
   line-height:1;
   white-space:nowrap;
   cursor:pointer;
-  transition:color .18s var(--ease);
+  transition:color .18s var(--ease),background-color .18s var(--ease),border-color .18s var(--ease),box-shadow .18s var(--ease);
 }
 
 .language-trigger::before{
@@ -47,8 +47,10 @@
 
 .language-trigger:hover,
 .language-trigger[aria-expanded="true"]{
-  background:transparent;
-  color:var(--fg);
+  border-color:color-mix(in oklch,var(--accent) 24%,var(--border));
+  background:var(--accent-wash);
+  color:var(--accent-dark);
+  box-shadow:0 1px 2px rgb(28 31 38/.04);
 }
 
 .language-trigger[aria-expanded="true"]::after{
@@ -66,22 +68,37 @@
   top:calc(100% + 10px);
   right:0;
   z-index:120;
-  width:224px;
-  padding:8px;
-  border:1px solid var(--border);
-  border-radius:14px;
+  width:248px;
+  padding:10px;
+  border:1px solid color-mix(in oklch,var(--accent) 18%,var(--border));
+  border-radius:17px;
   background:var(--white);
-  box-shadow:var(--shadow-lg,0 18px 45px rgb(28 31 38/.16));
+  box-shadow:0 24px 60px rgb(28 31 38/.18),0 6px 16px rgb(28 31 38/.08);
+  animation:language-menu-in .16s ease-out;
+}
+
+.language-menu::before{
+  content:"";
+  position:absolute;
+  right:24px;
+  top:-6px;
+  width:11px;
+  height:11px;
+  border-left:1px solid color-mix(in oklch,var(--accent) 18%,var(--border));
+  border-top:1px solid color-mix(in oklch,var(--accent) 18%,var(--border));
+  background:var(--white);
+  transform:rotate(45deg);
 }
 
 .language-menu[hidden]{display:none}
 
 .language-option{
+  position:relative;
   width:100%;
-  min-height:44px;
-  padding:0 10px;
-  border:0;
-  border-radius:9px;
+  min-height:48px;
+  padding:0 12px;
+  border:1px solid transparent;
+  border-radius:11px;
   background:transparent;
   color:var(--fg);
   display:flex;
@@ -91,20 +108,38 @@
   font:inherit;
   font-size:12px;
   cursor:pointer;
+  transition:background-color .16s var(--ease),border-color .16s var(--ease),color .16s var(--ease),transform .16s var(--ease);
 }
 
 .language-option:hover{
+  border-color:var(--border);
   background:var(--surface);
   color:var(--fg);
+  transform:translateX(2px);
 }
 
 .language-option[aria-checked="true"]{
+  border-color:color-mix(in oklch,var(--accent) 24%,var(--border));
   background:var(--accent-wash);
   color:var(--accent-dark);
   font-weight:800;
 }
 
-.language-option[aria-disabled="true"]{color:var(--muted)}
+.language-option[aria-checked="true"]::after{
+  content:"✓";
+  width:21px;
+  height:21px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--button-accent,var(--accent));
+  color:var(--white);
+  font-size:11px;
+  line-height:1;
+}
+
+.language-option[aria-disabled="true"]{color:var(--muted);cursor:not-allowed}
+.language-option[aria-disabled="true"]:hover{transform:none;background:var(--surface)}
 .language-option-code{width:30px;color:inherit;font-size:10px;font-weight:800;letter-spacing:.04em}
 .language-option-name{flex:1}
 .language-option-state{font-size:9px;color:var(--muted)}
@@ -113,11 +148,17 @@
 .language-status{
   margin:6px 4px 2px;
   padding:8px 9px;
-  border-radius:8px;
-  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:color-mix(in oklch,var(--surface) 82%,var(--white));
   color:var(--muted);
   font-size:10px;
   line-height:1.5;
+}
+
+@keyframes language-menu-in{
+  from{opacity:0;transform:translateY(-5px) scale(.98)}
+  to{opacity:1;transform:none}
 }
 
 @media(max-width:1100px){
@@ -128,9 +169,11 @@
   .language-trigger{min-height:42px;font-size:11px;gap:5px}
   .language-trigger::before{width:14px;height:14px;flex-basis:14px}
   .language-trigger::after{width:5px;height:5px}
-  .language-menu{position:fixed;top:72px;right:14px;width:min(224px,calc(100vw - 28px))}
+  .language-menu{position:fixed;top:72px;right:14px;width:min(248px,calc(100vw - 28px))}
+  .language-menu::before{display:none}
 }
 
 @media(prefers-reduced-motion:reduce){
-  .language-trigger,.language-trigger::after{transition:none}
+  .language-trigger,.language-trigger::after,.language-option{transition:none}
+  .language-menu{animation:none}
 }
