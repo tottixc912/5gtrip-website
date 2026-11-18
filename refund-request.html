@@ -8,6 +8,7 @@
   <link rel="icon" href="assets/5gtrip-favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/product-pages.css">
   <link rel="stylesheet" href="assets/language-selector.css">
+  <link rel="stylesheet" href="assets/custom-select.css">
 </head>
 <body>
   <a class="skip" href="#refundForm">跳到退款申请表单</a>
@@ -50,6 +51,7 @@
     document.querySelector('#refundForm').addEventListener('submit',event=>{event.preventDefault();if(!validate()){document.querySelector('.invalid')?.focus();return}const reasonSelect=document.querySelector('#refundReason'),now=new Date(),request={id:`RFD-${now.toISOString().slice(0,10).replaceAll('-','')}-${String(now.getTime()).slice(-6)}`,orderId:order.id,email:document.querySelector('#refundEmail').value.trim(),reason:reasonSelect.value,reasonLabel:reasonSelect.options[reasonSelect.selectedIndex].text,usageStatus:document.querySelector('#usageStatus').value,issueDate:issueDate.value,details:details.value.trim(),files:[...evidence.files].map(file=>file.name),status:'待审核',createdAt:formatTime(now),demo:true};requests.unshift(request);localStorage.setItem('5gtrip-refund-requests',JSON.stringify(requests));showRequest(request);scrollTo({top:0,behavior:'smooth'})});
     }
   </script>
+  <script src="assets/custom-select.js" defer></script>
   <script src="assets/form-accessibility.js" defer></script>
   <script src="assets/language-selector.js" defer></script>
   <script src="assets/support-chat.js" defer></script>

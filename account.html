@@ -8,6 +8,7 @@
   <link rel="icon" href="assets/5gtrip-favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/product-pages.css">
   <link rel="stylesheet" href="assets/language-selector.css">
+  <link rel="stylesheet" href="assets/custom-select.css">
 </head>
 <body>
   <a class="skip" href="#accountContent">跳到账户内容</a>
@@ -27,6 +28,7 @@
     function showToast(message){toast.textContent=message;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}document.querySelector('#profileForm').addEventListener('submit',event=>{event.preventDefault();if(!event.currentTarget.reportValidity())return;const updated={...session,name:document.querySelector('#profileName').value.trim(),email:document.querySelector('#profileEmail').value.trim(),phone:document.querySelector('#profilePhone').value.trim(),country:document.querySelector('#profileCountry').value};localStorage.setItem('5gtrip-session',JSON.stringify(updated));document.querySelector('#sidebarName').textContent=updated.name;document.querySelector('#sidebarEmail').textContent=updated.email;document.querySelector('#previewNote').hidden=true;showToast('资料已保存在当前浏览器')});document.querySelectorAll('.demo-action').forEach(button=>button.addEventListener('click',()=>showToast(button.dataset.message)));document.querySelectorAll('[data-preference]').forEach(input=>{input.checked=JSON.parse(localStorage.getItem(`5gtrip-pref-${input.dataset.preference}`)||String(input.checked));input.addEventListener('change',()=>{localStorage.setItem(`5gtrip-pref-${input.dataset.preference}`,String(input.checked));showToast('通知偏好已更新')})});
     const dialog=document.querySelector('#logoutDialog');document.querySelector('#logoutButton').addEventListener('click',()=>dialog.classList.add('open'));document.querySelector('#cancelLogout').addEventListener('click',()=>dialog.classList.remove('open'));document.querySelector('#keepSession').addEventListener('click',()=>dialog.classList.remove('open'));document.querySelector('#confirmLogout').addEventListener('click',()=>{localStorage.removeItem('5gtrip-session');location.href='login.html'});dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.classList.remove('open')});
   </script>
+  <script src="assets/custom-select.js" defer></script>
   <script src="assets/form-accessibility.js" defer></script>
   <script src="assets/language-selector.js" defer></script>
   <script src="assets/support-chat.js" defer></script>

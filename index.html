@@ -6,6 +6,7 @@
   <title>5GTrip｜全球旅行 eSIM</title>
   <link rel="icon" href="assets/5gtrip-favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/language-selector.css">
+  <link rel="stylesheet" href="assets/custom-select.css">
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="assets/support-chat.css">
   <style>
@@ -217,6 +218,7 @@
     document.querySelector('#buyForm').addEventListener('submit',e=>{e.preventDefault();closeModal();const toast=document.querySelector('#toast');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2400)});
     const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   </script>
+  <script src="assets/custom-select.js" defer=""></script>
   <script src="assets/form-accessibility.js" defer=""></script>
   <script src="assets/language-selector.js" defer=""></script>
   <script src="assets/support-chat.js" defer=""></script>

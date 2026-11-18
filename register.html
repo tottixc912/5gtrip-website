@@ -8,6 +8,7 @@
   <link rel="icon" href="assets/5gtrip-favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/product-pages.css">
   <link rel="stylesheet" href="assets/language-selector.css">
+  <link rel="stylesheet" href="assets/custom-select.css">
 </head>
 <body class="auth-page">
   <a class="skip" href="#registerForm">跳到注册表单</a>
@@ -22,6 +23,7 @@
     function passwordScore(value){let score=0;if(value.length>=8)score++;if(/[A-Za-z]/.test(value)&&/\d/.test(value))score++;if(value.length>=12&&/[^A-Za-z0-9]/.test(value))score++;return score}passwordInput.addEventListener('input',()=>{const score=passwordScore(passwordInput.value),labels=['尚未输入','可用','良好','较强'];document.querySelectorAll('.password-strength i').forEach((bar,index)=>bar.classList.toggle('active',index<score));document.querySelector('#strengthLabel').textContent=labels[score]});
     form.addEventListener('submit',event=>{event.preventDefault();clearErrors();let valid=true;const name=nameInput.value.trim(),email=emailInput.value.trim();if(!name){setError('name','请输入姓名');valid=false}if(!countryInput.value){setError('country','请选择国家或地区');valid=false}if(!/^\S+@\S+\.\S+$/.test(email)){setError('email','请输入有效邮箱');valid=false}if(passwordScore(passwordInput.value)<2){setError('password','密码至少 8 位，并包含字母和数字');valid=false}if(confirmInput.value!==passwordInput.value){setError('confirm','两次输入的密码不一致');valid=false}if(!termsInput.checked){setError('terms','请先同意条款');valid=false}if(!valid){document.querySelector('.invalid')?.focus();return}localStorage.setItem('5gtrip-signup-draft',JSON.stringify({name,email,country:countryInput.value,createdAt:new Date().toISOString()}));location.href='verify-email.html'});
   </script>
+  <script src="assets/custom-select.js" defer></script>
   <script src="assets/form-accessibility.js" defer></script>
   <script src="assets/language-selector.js" defer></script>
   <script src="assets/support-chat.js" defer></script>

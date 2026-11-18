@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "Projects/5gtrip-website/email-verification-email.html",
+  "entry": "Projects/5gtrip-website/email-verification-email.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-11-08T07:33:44.210Z",
+  "updatedAt": "2026-11-08T07:33:44.210Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

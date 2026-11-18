@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "Projects/5gtrip-website/download-app.html",
+  "entry": "Projects/5gtrip-website/download-app.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-11-08T07:33:44.194Z",
+  "updatedAt": "2026-11-08T12:12:54.500Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

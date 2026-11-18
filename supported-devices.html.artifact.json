@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "Projects/5gtrip-website/supported-devices.html",
+  "entry": "Projects/5gtrip-website/supported-devices.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-11-08T07:33:44.239Z",
+  "updatedAt": "2026-11-08T07:33:44.239Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

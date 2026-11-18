@@ -8,6 +8,7 @@
   <link rel="icon" href="assets/5gtrip-favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/product-pages.css">
   <link rel="stylesheet" href="assets/language-selector.css">
+  <link rel="stylesheet" href="assets/custom-select.css">
 </head>
 <body>
   <a class="skip" href="#checkoutForm">跳到结算表单</a>
@@ -49,6 +50,7 @@
     function validate(){clearErrors();let valid=true;const name=document.querySelector('#fullName').value.trim(),email=document.querySelector('#email').value.trim(),country=document.querySelector('#country').value,terms=document.querySelector('#terms').checked;if(!name){setError('fullName','请输入姓名');valid=false}if(!/^\S+@\S+\.\S+$/.test(email)){setError('email','请输入有效邮箱');valid=false}if(!country){setError('country','请选择账单国家或地区');valid=false}if(paymentMethod==='card'){if(cardNumber.value.replace(/\D/g,'').length!==16){setError('cardNumber','请输入 16 位演示卡号');valid=false}if(!/^\d{2}\/\d{2}$/.test(expiry.value)){setError('expiry','格式应为 MM/YY');valid=false}if(cvc.value.length!==3){setError('cvc','请输入 3 位安全码');valid=false}}if(!terms){setError('terms','请先同意条款');valid=false}return valid}
     document.querySelector('#checkoutForm').addEventListener('submit',event=>{event.preventDefault();if(!item.price||!validate()){document.querySelector('.invalid')?.focus();return}if(couponCode){const current=TripCoupons.quote(couponCode,subtotal);if(!current.valid){couponCode='';discount=0;total=subtotal;renderCoupon();couponMessage.textContent='优惠码已失效，请重新核对。';couponInput.focus();return}discount=current.discount;total=subtotal-discount}const now=new Date(),orderId=`5GT-${now.toISOString().slice(0,10).replaceAll('-','')}-${String(now.getTime()).slice(-6)}`,methodNames={card:'银行卡',alipay:'支付宝',wechat:'微信支付'},order={id:orderId,createdAt:new Intl.DateTimeFormat('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(now).replaceAll('/','-'),status:'待激活',paymentStatus:'演示支付',paymentMethod:methodNames[paymentMethod],demo:true,contact:{name:document.querySelector('#fullName').value.trim(),email:document.querySelector('#email').value.trim(),phone:document.querySelector('#phone').value.trim(),country:document.querySelector('#country').value},items:[item],subtotal,discount,total,couponCode:couponCode||null,activationCode:`LPA:1$demo.5gtrip.example$${orderId}`};try{const orders=TripCoupons.orders();orders.unshift(order);localStorage.setItem('5gtrip-orders',JSON.stringify(orders));localStorage.removeItem('5gtrip-direct-checkout')}catch{couponMessage.textContent='当前浏览器无法保存订单，请允许此站点使用本地存储后重试。';return}document.querySelector('#viewOrder').href=`order-detail.html?id=${encodeURIComponent(orderId)}`;document.querySelector('#checkoutShell').hidden=true;document.querySelector('#successPanel').classList.add('show');history.replaceState(null,'','checkout.html');scrollTo({top:0,behavior:'smooth'})});
   </script>
+  <script src="assets/custom-select.js" defer></script>
   <script src="assets/form-accessibility.js" defer></script>
   <script src="assets/language-selector.js" defer></script>
   <script src="assets/support-chat.js" defer></script>

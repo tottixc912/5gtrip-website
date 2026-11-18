@@ -8,6 +8,7 @@
   <link rel="icon" href="assets/5gtrip-favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/product-pages.css">
   <link rel="stylesheet" href="assets/language-selector.css">
+  <link rel="stylesheet" href="assets/custom-select.css">
 </head>
 <body>
   <a class="skip" href="#catalog">跳到套餐目录</a>
@@ -102,6 +103,7 @@
     document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected','false'));tab.setAttribute('aria-selected','true');current=tab.dataset.type;render()}));
     search.addEventListener('input',render);sort.addEventListener('change',render);document.querySelector('#clearSearch').addEventListener('click',()=>{search.value='';render();search.focus()});render();
   </script>
+  <script src="assets/custom-select.js" defer></script>
   <script src="assets/language-selector.js" defer></script>
   <script src="assets/support-chat.js" defer></script>
 </body>

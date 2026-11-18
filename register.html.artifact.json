@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "Projects/5gtrip-website/register.html",
+  "entry": "Projects/5gtrip-website/register.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-11-08T07:33:44.237Z",
+  "updatedAt": "2026-11-08T07:33:44.237Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

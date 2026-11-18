@@ -8,6 +8,7 @@
   <link rel="icon" href="assets/5gtrip-favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/product-pages.css">
   <link rel="stylesheet" href="assets/language-selector.css">
+  <link rel="stylesheet" href="assets/custom-select.css">
   <style>
     .country-detail-page .travel-visual{position:relative;top:auto;align-self:start}
     .country-detail-page .detail-content{min-width:0}
@@ -159,6 +160,7 @@
     document.querySelector('#unlimitedDays').addEventListener('change',updatePurchaseState);updatePurchaseState();
     purchaseButton.addEventListener('click',event=>{if(purchaseButton.getAttribute('aria-disabled')==='true'){event.preventDefault();return}try{localStorage.setItem('5gtrip-direct-checkout',JSON.stringify({item:selectedItem(),createdAt:Date.now()}))}catch{}});
   </script>
+  <script src="assets/custom-select.js" defer></script>
   <script src="assets/form-accessibility.js" defer></script>
   <script src="assets/language-selector.js" defer></script>
   <script src="assets/support-chat.js" defer></script>

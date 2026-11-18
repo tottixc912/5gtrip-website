@@ -8,6 +8,7 @@
   <link rel="icon" href="assets/5gtrip-favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/product-pages.css">
   <link rel="stylesheet" href="assets/language-selector.css">
+  <link rel="stylesheet" href="assets/custom-select.css">
   <style>
     .device-rules .check-grid article::before,.device-rules .check-grid article::after{display:none}
     .device-rule-icon{position:absolute;left:20px;top:18px;width:72px;height:56px;border-radius:18px;display:grid;place-items:center;color:#fff;box-shadow:0 12px 24px rgb(28 31 38/.16)}
@@ -115,6 +116,7 @@
     function render(){const keyword=search.value.trim().toLowerCase(),brand=brandFilter.value,visible=devices.filter(item=>(activeType==='all'||item.type===activeType)&&(brand==='all'||item.brand===brand)&&(!keyword||`${item.brand} ${item.models} ${item.note}`.toLowerCase().includes(keyword))),brands=[...new Set(visible.map(item=>item.brand))];directory.innerHTML=brands.map(name=>{const items=visible.filter(item=>item.brand===name);return `<section class="device-brand-group surface-card" data-od-id="device-brand-${name.toLowerCase().replace(/[^a-z0-9]+/g,'-')}"><header><div><span>${items.length} 个型号组</span><h3>${name}</h3></div><a href="${sources[name].url}" target="_blank" rel="noopener" aria-label="查看 ${name} 官方资料">官方资料 ↗</a></header><div>${items.map(item=>`<article><span>${typeNames[item.type]}</span><div><strong>${item.models}</strong><p>${item.note}</p></div></article>`).join('')}</div></section>`}).join('');count.textContent=visible.length;empty.hidden=visible.length>0;clear.hidden=!search.value;}
     document.querySelectorAll('.device-type-tabs button').forEach(button=>button.addEventListener('click',()=>{activeType=button.dataset.type;document.querySelectorAll('.device-type-tabs button').forEach(item=>item.setAttribute('aria-selected',String(item===button)));render()}));search.addEventListener('input',render);brandFilter.addEventListener('change',render);clear.addEventListener('click',()=>{search.value='';search.focus();render()});document.querySelector('#resetDevices').addEventListener('click',()=>{search.value='';brandFilter.value='all';activeType='all';document.querySelectorAll('.device-type-tabs button').forEach((item,index)=>item.setAttribute('aria-selected',String(index===0)));render()});document.querySelector('#sourceGrid').innerHTML=Object.entries(sources).map(([brand,source])=>`<a class="source-card surface-card" href="${source.url}" target="_blank" rel="noopener"><span>${brand}</span><strong>${source.label}</strong><b>打开来源 ↗</b></a>`).join('');render();
   </script>
+  <script src="assets/custom-select.js" defer></script>
   <script src="assets/language-selector.js" defer></script>
   <script src="assets/support-chat.js" defer></script>
 </body>
